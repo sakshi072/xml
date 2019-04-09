@@ -1,0 +1,263 @@
+<Table analyzerId="28123" id="1770" schema_version="2" serviceName="ma" table_version="1" version="1">
+    <Properties>
+      <Property name="UpdatesAllowed" value="yes"/>
+      <Property name="SegmentDuration" value="4,h"/>
+      <Property name="ExpectedLatency" value="10,s"/>
+      <Property name="Type" value="Regular"/>
+      <Property name="DuplicatesAllowed" value="no"/>
+      <Property name="KeyType" value="Pseudo"/>
+    </Properties>
+    <Configuration>
+      <Property name="MaxRecords" value="10000000"/>
+      <Property name="AggInterval" value="60"/>
+      <Property name="PurgeWindow" value="91"/>
+    </Configuration>
+    <Columns>
+      <Column dtype="Date" name="time">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="UInt32" name="hour_of_day">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="UInt32" name="day_of_week">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="StringIndex" name="cpcode_group">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="StringIndex" name="e2c_perf_s_client_is_high_bw">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="StringIndex" name="e2c_perf_s_edge_map">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="StringIndex" name="e2c_perf_s_edge_map_group">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="StringIndex" name="e2c_perf_s_error_flag">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="UInt32" name="e2c_perf_http_status_buckets">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="StringIndex" name="e2c_perf_s_object_status_buckets">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="StringIndex" name="p1_http_method">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="StringIndex" name="e2c_perf_s_client_asn">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="StringIndex" name="e2c_perf_s_client_isp_name">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="StringIndex" name="e2c_perf_s_client_country">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="StringIndex" name="e2c_perf_s_client_continent">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="StringIndex" name="is_apple_enduser">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="StringIndex" name="edge_role">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="StringIndex" name="islargerequest">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="StringIndex" name="1770_reserved_dim_1">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="StringIndex" name="1770_reserved_dim_2">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="StringIndex" name="egress_reserved_dim_1">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="StringIndex" name="egress_reserved_dim_2">
+        <Property name="Type" value="Key"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_content_size">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_5xx_code_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="egress_error_flag_metric">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_distance">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_in_country">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_num_lines">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_request_end_time">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_total_bytes_served">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_transfer_time">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_turnaround_time">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="per_log_line_tp">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="throughput_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_trnard_tm_0_10ms_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_trnard_tm_10_50ms_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_trnard_tm_50_100ms_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_trnard_tm_100_500ms_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_trnard_tm_500_2000ms_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_trnard_tm_gt_2000ms_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_bytes_0_500kb_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_bytes_500_1000kb_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_bytes_1_3mb_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_bytes_3_10mb_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_bytes_10_100mb_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_bytes_gt_100mb_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_tp_lt_1mbps_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_tp_1mbps_to_3mbps_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_tp_3mbps_to_5mbps_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_tp_5mbps_to_8mbps_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_tp_8mbps_to_12mbps_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_tp_12mbps_to_20mbps_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_tp_gt_20mbps_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_distance_0_100mil_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_distance_100_300mil_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_distance_300_1000mil_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_distance_1000_3500mil_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_distance_gt3500_mil_count">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_tfrtm_0_2sec">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_tfrtm_2_4sec">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_tfrtm_4_6sec">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_tfrtm_6_10sec">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="p1_tfrtm_gt_10sec">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="1770_reserved_metric1">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="1770_reserved_metric2">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="egress_reserved_metric1">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+      <Column dtype="UInt64" name="egress_reserved_metric2">
+        <Property name="Type" value="Metric"/>
+        <Property name="updateFunc" value="sum"/>
+      </Column>
+    </Columns>
+  </Table>
